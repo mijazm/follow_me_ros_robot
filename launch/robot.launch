@@ -1,0 +1,8 @@
+<launch>
+  <node name="serial_node" pkg="rosserial_python" type="serial_node.py" args="/dev/ttyUSB0" output="screen"/>
+  <node name="joy_node" pkg="joy" type="joy_node" output="screen"/>
+  <node name="gamepad_control_node" pkg="follow_me_ros_robot" type="gamepad_control.py" output="screen"/>
+  <node name="odometry_node" pkg="follow_me_ros_robot" type="odometry.py" output="screen"/>
+  <node name="pid_node" pkg="follow_me_ros_robot" type="pid_controller.py" output="screen"/>
+  <node name="human_detection_node" pkg="follow_me_ros_robot" type="follow_me.py" output="screen"/>
+</launch>
